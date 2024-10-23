@@ -1,0 +1,39 @@
+###
+POST  http://localhost:3000/transactions
+Content-Type: application/json
+
+{
+    "type": "expense",
+    "category": "utilities",
+    "amount": "100",
+    "description": "This expenses is for utilities"
+}
+
+###
+GET http://localhost:3000/transactions
+
+### get by id check
+GET  http://localhost:3000/transactions/4
+
+###
+GET http://localhost:3000/categories
+
+### update by ID
+PUT http://localhost:3000/transactions/4
+Content-Type: application/json
+
+{
+    "type": "expense",
+    "category": "Food",
+    "amount": "2000",
+    "description": "This expenses is for food faciltiles"
+}
+
+
+###
+DELETE http://localhost:3000/transactions/4
+
+### get summary
+
+GET http://localhost:3000/summary
+
